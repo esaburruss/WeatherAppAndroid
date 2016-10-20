@@ -239,7 +239,7 @@ public class FiveDayActivity extends AppCompatActivity {
             todayLow.setText(d.getLow());
             todayDate.setText(d.getDate() + ", " + d.getDate2());
             todayWeather.setText(d.getWeather());
-            img0.setImageResource(getResources().getIdentifier("art_" + d.getWeather().toLowerCase(), "drawable", getPackageName()));
+            img0.setImageResource(getResources().getIdentifier("art_" + d.getIcon(), "drawable", getPackageName()));
 
             for (int i = 1; i < info.size(); i++) {
                 DailyWeatherInfo day = info.get(i);
@@ -248,7 +248,7 @@ public class FiveDayActivity extends AppCompatActivity {
                 String dateId = "date" + i;
                 String weatherId = "weather" + i;
                 String imgId = "img" + i;
-                String imgName = "ic_" + day.getWeather().toLowerCase();
+                String imgName = "ic_" + day.getIcon();
                 ((TextView) findViewById(getResources().getIdentifier(lowId, "id", getPackageName()))).setText(day.getLow());
                 ((TextView) findViewById(getResources().getIdentifier(highId, "id", getPackageName()))).setText(day.getHigh());
                 ((TextView) findViewById(getResources().getIdentifier(dateId, "id", getPackageName()))).setText(day.getDate());

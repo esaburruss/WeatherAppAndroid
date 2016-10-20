@@ -156,4 +156,8 @@ public class DailyWeatherInfo implements Serializable{
 
     }
 
+    public String getIcon(){
+        return weather.toLowerCase().replace(" ", "_");
+    }
+
 }

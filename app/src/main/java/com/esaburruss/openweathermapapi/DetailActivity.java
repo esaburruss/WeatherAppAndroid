@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
         pressure = (TextView) findViewById(R.id.pressure);
         wind = (TextView) findViewById(R.id.wind);
 
-        img.setImageResource(getResources().getIdentifier("art_" + todayInfo.getWeather().toLowerCase(), "drawable", getPackageName()));
+        img.setImageResource(getResources().getIdentifier("art_" + todayInfo.getIcon(), "drawable", getPackageName()));
         d1.setText(todayInfo.getDate());
         d2.setText(todayInfo.getDate2());
         low.setText(todayInfo.getLow());
